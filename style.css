@@ -1,0 +1,392 @@
+@font-face {
+    font-family: bread;
+    src: url(/assets/yummy_bread.ttf); 
+}
+
+@font-face {
+    font-family:aa;
+    src: url(/assets/SilkRemington-SBold.ttf); 
+}
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+*::selection{
+    background-color:rgba(185,255,8,.25);
+    color: #1f1914;
+}
+
+body {
+  font-family: 'bread';
+  background-image: url(/assets/greenfingers.jpeg);
+  background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  color: #b9ff08;
+  /*line-height: 1.6;*/
+}
+
+header {
+    display:flex;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    background-image:url(/assets/brownsky.jpeg);
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    box-shadow:0px -20px 30px 50px rgba(0,0,0,.92);
+    height:6.3rem;
+}
+
+#titlebar{
+    display:flex;
+    flex-direction: row;
+}
+
+header img{
+    width:80px;
+    height:80px;
+    margin:0px;
+    padding-right:0;
+}
+
+header h1{
+    margin:10px;
+    padding-left:0;
+    font-size:4.105rem;
+}
+
+header ul{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    height:100%;
+}
+
+header li{
+    padding:10px;
+    height:100%;
+    display:flex;
+    align-items: center;
+    font-size:2rem;
+    min-width:170px;
+    justify-content:center;
+    transition: background-color 0.2s;
+    transition: box-shadow 0.2s;
+}
+
+header li:hover{
+    background-color:#b9ff08;
+    box-shadow:0px 0px 15px 5px inset black;
+}
+
+header a:link, header a:visited {
+    color: #b9ff08;
+    text-decoration-line:none;
+    transition: color 0.2s;
+}
+
+header li:hover a:link, header li:hover a:visited{
+    color:#1f1914;
+}
+
+header li::marker{
+    content:none;
+}
+
+main{
+    padding:60px;
+    padding-top: 9.65rem;
+    font-family:aa;
+    z-index:2;
+}
+
+div{
+    font-size:.9rem;
+}
+
+p{
+    font-size:1rem;
+}
+
+h1{
+    font-size:2.5rem;
+    margin-bottom:1rem;
+}
+
+h2{
+    font-size:2rem;
+    margin-top:12px;
+    margin-bottom:8px;
+}
+
+.productCard h2{
+    font-size:1.2rem;
+}
+
+.dropdown-content{
+    display:none;
+    transition:height 2s;
+}
+
+.dropdown:hover .dropdown-content a{
+    font-size:1.85rem;
+    box-shadow:0px 10px 10px 2px inset rgba(0,0,0,.2);
+    padding:15px;
+    color:#b9ff08;
+}
+
+.dropdown:hover .dropdown-content{
+    display:flex;
+    flex-direction:column;
+    background-color: #1f1914;
+    position:fixed;
+    top:100px;
+    right:170px;
+    width:170px;
+    z-index:1;
+}
+
+.dropdown:hover .dropdown-content a:hover{
+    background-color: #b9ff08;
+    transition:background-color .2s;
+}
+
+.dropdown:hover .dropdown-content a:hover{
+    color:#1f1914;
+    transition:color .2s;
+}
+
+#menubutton{
+    display:none;
+    padding:25px;
+    width:130px;
+}
+
+#menubutton img{
+    width:80px;
+    height:65px;
+}
+
+#menubutton:hover{
+    background-color:#b9ff08;
+    box-shadow:0px 0px 15px 5px inset black;
+}
+
+#about{
+    display:flex;
+    flex-direction: row;
+}
+
+#aboutp{
+    max-width:50rem;
+    margin-top:30px;
+}
+
+#aboutp p{
+    font-size:1.5rem;
+}
+
+#abtImg{
+    width:40rem;
+    height:34rem;
+}
+
+#Creams,#Oils,#GlutenFree,#Tinctures{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1.35rem;
+    margin-bottom:3rem;
+    margin-top:1.5rem;
+}
+
+.productCard{
+    width:17rem;
+    height:22rem;
+    padding:1.5rem;
+    background-color:rgba(31, 25, 20,.9);
+    border:1.5px solid rgba(185,255,8,.5);
+    box-shadow:2.5px 5px 10px 0px rgba(31, 25, 20,.4);
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.cardImg{
+    background-image:linear-gradient(to bottom right, rgba(224, 244, 222,0.05), rgba(152, 211, 177, .05));
+    padding:5px;
+    background-size:150%;
+    width:100%;
+    height:13rem;
+    border-radius:15px;
+    display:flex;
+    justify-content: center;
+    align-content: center;/*???*/
+}
+
+.cartItem{
+    background-color:rgba(31, 25, 20,.9);
+    border:1.5px solid rgba(185,255,8,.5);
+    box-shadow:2.5px 5px 10px 0px rgba(31, 25, 20,.4);
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:12px;
+}
+
+label{
+    font-size:1.3rem;
+}
+
+input[type=text],input[type=email],textarea{
+    width:100%;
+    min-height:50px;
+    font-size:1rem;
+    font-family:aa;
+    background-color:rgba(31, 25, 20,.9);
+    border:1.5px solid rgba(185,255,8,.5);
+    box-shadow:2.5px 5px 10px 0px rgba(31, 25, 20,.4);
+    color:#b9ff08;
+    border-radius:10px;
+    padding:15px;
+}
+
+input[type=text]:focus,input[type=email]:focus,textarea:focus{
+    background-color: #b9ff08;
+    color:#1f1914;
+    border:1px solid #1f1914;
+    border-radius:10px;
+}
+
+input[type=text]::placeholder,input[type=email]::placeholder,textarea::placeholder{
+    color:rgba(185,255,8,.65);
+}
+
+textarea{
+    resize:a;
+}
+
+input[type=submit]{
+    width:100px;
+    height:50px;
+    font-size:1rem;
+    font-family:aa;
+    background-color:rgba(31, 25, 20,.9);
+    color:#b9ff08;
+    border:1.5px solid rgba(185,255,8,.5);
+    box-shadow:2.5px 5px 10px 0px rgba(31, 25, 20,.4);
+    border-radius:10px;
+    padding:15px;
+    transition:background-color .2s;
+}
+
+input[type=submit]:hover{
+    width:100px;
+    height:50px;
+    font-size:1rem;
+    font-family:aa;
+    background-color:rgba(185,255,8,.8);
+    color:#1f1914;
+    border:1.5px solid rgba(31, 25, 20,.5);
+    box-shadow:2.5px 5px 10px 0px rgba(31, 25, 20,.4);
+    
+    border-radius:10px;
+    padding:15px;
+}
+
+input[type=number]{
+    background-color:rgba(185,255,8,.5);
+    box-shadow:2px 2px 5px 1px inset rgba(31, 25, 20,.9);
+    height:40px;
+    width:55px;
+    font-family:aa;
+    color:#1f1914;
+    font-size:1.2rem;
+    border:1px solid #b9ff08;
+    border-radius:5px;
+    padding:5px;
+}
+
+/*input[type=checkbox]{
+    opacity:0;
+}*/
+
+footer{
+    font-family:aa;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/brownsky.jpeg);
+    height:150px;
+    padding:20px;
+    box-shadow:0px 32px 20px -19px inset rgba(0,0,0,.92);
+    border-top:1px solid #b9ff08;
+}
+
+
+@media only screen and (max-width: 840px) {
+  header ul{
+    display:none;
+}
+
+#menubutton{
+    display:block;
+}
+
+#menubutton:hover img{
+    filter: invert(98%) sepia(13%) saturate(30%) hue-rotate(130deg) brightness(35%) contrast(90%);
+}
+
+.dropdown:hover .dropdown-content{
+    right:0px;
+    justify-content:end;
+    width:130px;
+}
+
+.dropdown:hover .dropdown-content a{
+    min-width:100%;
+    font-size:1.5rem;
+}
+
+}
+
+@media only screen and (max-width: 1000px){
+    #abtImg{
+        display:none;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 170px;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background:#1b110a;
+  box-shadow: inset 0px 1px 10px black;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #3f2e24;
+  box-shadow: inset 0px 0px 3px 0px black;
+  border-radius:4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b9ff08; 
+  transition:background 2s;
+}
